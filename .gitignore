@@ -1,8 +1,4 @@
-/ExCollection/ExCollection.csproj.user
-/ExCollection/bin/
-/ExCollection/obj/
-/UnitTestProject1/obj/
-/UnitTestProject1/bin/
-/UnitTestProject1/bin/Debug/netcoreapp3.1/
-/UnitTestProject1/obj/Debug/netcoreapp3.1/
+/ExMqttClient/ExCollection.csproj.user
+/ExMqttClient/bin/
+/ExMqttClient/obj/
 /.vs/
