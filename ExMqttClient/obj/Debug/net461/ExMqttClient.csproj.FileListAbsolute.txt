@@ -1,0 +1,10 @@
+C:\Users\abc\source\repos\GlibWild\ExMqttClient\ExMqttClient\ExMqttClient\bin\Debug\net461\ExMqttClient.dll
+C:\Users\abc\source\repos\GlibWild\ExMqttClient\ExMqttClient\ExMqttClient\bin\Debug\net461\ExMqttClient.pdb
+C:\Users\abc\source\repos\GlibWild\ExMqttClient\ExMqttClient\ExMqttClient\bin\Debug\net461\MQTTnet.dll
+C:\Users\abc\source\repos\GlibWild\ExMqttClient\ExMqttClient\ExMqttClient\obj\Debug\net461\ExMqttClient.csprojAssemblyReference.cache
+C:\Users\abc\source\repos\GlibWild\ExMqttClient\ExMqttClient\ExMqttClient\obj\Debug\net461\ExMqttClient.AssemblyInfoInputs.cache
+C:\Users\abc\source\repos\GlibWild\ExMqttClient\ExMqttClient\ExMqttClient\obj\Debug\net461\ExMqttClient.AssemblyInfo.cs
+C:\Users\abc\source\repos\GlibWild\ExMqttClient\ExMqttClient\ExMqttClient\obj\Debug\net461\ExMqttClient.csproj.CoreCompileInputs.cache
+C:\Users\abc\source\repos\GlibWild\ExMqttClient\ExMqttClient\ExMqttClient\obj\Debug\net461\ExMqttClient.csproj.CopyComplete
+C:\Users\abc\source\repos\GlibWild\ExMqttClient\ExMqttClient\ExMqttClient\obj\Debug\net461\ExMqttClient.dll
+C:\Users\abc\source\repos\GlibWild\ExMqttClient\ExMqttClient\ExMqttClient\obj\Debug\net461\ExMqttClient.pdb
