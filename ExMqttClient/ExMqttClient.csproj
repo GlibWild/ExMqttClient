@@ -12,6 +12,8 @@ Mqttnet GitHub:https://github.com/chkr1011/MQTTnet</Description>
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <PackageLicenseFile>MIT.txt</PackageLicenseFile>
 	  <Copyright />
+	  <PackageProjectUrl>https://github.com/GlibWild/ExMqttClient</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/GlibWild/ExMqttClient</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
