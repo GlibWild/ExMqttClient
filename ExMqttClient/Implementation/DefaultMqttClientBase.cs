@@ -35,7 +35,7 @@ namespace ExMqttClient.Implementation
             this.UserPassword = UserPassword;
             this.TopicName = TopicName;
             this.IsShowInput = IsShowInput;
-            if (!string.IsNullOrEmpty(clientId)) 
+            if (!string.IsNullOrEmpty(ClientId)) 
             {
                 this.clientId = ClientId;
             }
