@@ -19,7 +19,7 @@ namespace ExMqttClient.Implementation
         public int Port { get; set; }
         public string UserName { get; set; }
         public string UserPassword { get; set; }
-        public string TopicName { get; set; }
+        public string[] TopicNames { get; set; }
         public bool IsShowInput { get; set; }
         public string ClientId { get; set; }
 
@@ -27,15 +27,15 @@ namespace ExMqttClient.Implementation
         public override event MqttDelegate.ConnectedDelegate OnConnected;
         public override event MqttDelegate.ReceivedMessageDelegate OnReceivedMessage;
 
-        public override void Init(string Host, int Port, string UserName, string UserPassword, string TopicName, bool IsShowInput,string ClientId)
+        public override void Init(string Host, int Port, string UserName, string UserPassword, string[] TopicNames, bool IsShowInput, string ClientId)
         {
             this.Host = Host;
             this.Port = Port;
             this.UserName = UserName;
             this.UserPassword = UserPassword;
-            this.TopicName = TopicName;
+            this.TopicNames = TopicNames;
             this.IsShowInput = IsShowInput;
-            if (!string.IsNullOrEmpty(ClientId)) 
+            if (!string.IsNullOrEmpty(ClientId))
             {
                 this.clientId = ClientId;
             }
@@ -162,11 +162,14 @@ namespace ExMqttClient.Implementation
                 Console.WriteLine($"client connected");
 
             OnConnected?.Invoke(obj);
-
-            ClientSubscribeTopic(TopicName);
+            if (TopicNames != null)
+                foreach (var TopicName in TopicNames)
+                {
+                    ClientSubscribeTopic(TopicName);
+                }
         }
 
-        protected override async void ClientSubscribeTopic(string topic)
+        public override async void ClientSubscribeTopic(string topic)
         {
             await mqttClient.SubscribeAsync(topic);
             if (IsShowInput)
@@ -185,6 +188,18 @@ namespace ExMqttClient.Implementation
             {
                 Console.WriteLine($"客户端尝试断开Server出错.>{ex.Message}");
             }
+        }
+
+        public async override void PublishTopic(string topic, string payload)
+        {
+            var message = new MqttApplicationMessage()
+            {
+                Topic = topic,
+                Payload = Encoding.UTF8.GetBytes(payload)
+            };
+            await mqttClient.PublishAsync(message);
+            if (IsShowInput)
+                Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}MQTT已发布主题{topic}");
         }
     }
 }
